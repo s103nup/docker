@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  mariadb:
+    image: mariadb:10.3.37
+    stdin_open: true
+    tty: true
+    volumes:
+      - /Users/tab.chang/Documents/git/docker/lnmp/data/mariadb
+    environment:
+      - MYSQL_DATABASE=default
+      - MYSQL_USER=default
+      - MYSQL_PASSWORD=secret
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - 3306:3306
